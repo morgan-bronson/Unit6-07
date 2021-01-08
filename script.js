@@ -8,10 +8,15 @@ function multiply () {
   let multiplicand = parseInt(document.getElementById("multiplicand").value)
   let product = 0
   let i = 0
-  for (i = 1; i <= multiplier; i++) {
-    console.log(i)
-    product=product+ multiplicand
-    console.log(product)
+  if (multiplier > 0) {
+    for (i = 1; i <= multiplier; i++) {
+      product=product+ multiplicand
+    }
+  }
+  else {
+    for (i = -1; i >= multiplier; i--) {
+      product=product - multiplicand
+    }
   }
   alert('the answer is ' + product)
 }
